@@ -19,7 +19,7 @@ sources:
         columns:
           - name: id
             description: primary key for customers data
-            tests:
+            data_tests:
               - unique
               - not_null 
         freshness: null
@@ -27,11 +27,11 @@ sources:
         description: raw orders data
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique
               - not_null
           - name: status
-            tests:
+            data_tests:
               - accepted_values:
                 # values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
                   values:
